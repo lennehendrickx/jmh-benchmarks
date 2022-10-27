@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5ab76fb-b5a6-49d1-9b6b-aa07dec2a496" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f5ab76fb-b5a6-49d1-9b6b-aa07dec2a496" name="Changes" comment="Setup test Benchmark">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/lennehendrickx/reflection_handler/AggregateRootWithCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/lennehendrickx/reflection_handler/AggregateRootWithoutCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/lennehendrickx/reflection_handler/AnnotatedHandlersPerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/lennehendrickx/reflection_handler/AppliesEventToState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/lennehendrickx/reflection_handler/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jmh/java/be/lennehendrickx/jmh/SampleBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jmh/java/be/lennehendrickx/jmh/SampleBenchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/lennehendrickx/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/lennehendrickx/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jmh/java/be/lennehendrickx/jmh/SampleBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jmh/java/be/lennehendrickx/jmh/ReflectionHandlerBenchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/lennehendrickx/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +26,23 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -30,24 +50,33 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GiZmJV9he3bXXfMEoBzWLA3852" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TF_FMT": "false",
     "WebServerToolWindowFactoryState": "false",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="be.lennehendrickx.reflection_handler" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="jmh-benchmarks [jmh]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" value="--rerun-tasks" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -72,8 +101,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666873524922</updated>
-      <workItem from="1666873526466" duration="1460000" />
+      <workItem from="1666873526466" duration="3385000" />
     </task>
+    <task id="LOCAL-00001" summary="Setup test Benchmark">
+      <created>1666875788154</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666875788154</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,11 +127,15 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Setup test Benchmark" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup test Benchmark" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/jmh/java/be/lennehendrickx/jmh/SampleBenchmark.java</url>
+          <url>file://$PROJECT_DIR$/src/jmh/java/be/lennehendrickx/jmh/ReflectionHandlerBenchmark.java</url>
           <line>11</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
