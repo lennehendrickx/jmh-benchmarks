@@ -10,16 +10,20 @@ import org.openjdk.jmh.infra.Blackhole;
 
 import java.util.List;
 
-@State(Scope.Benchmark)
 public class ReflectionHandlerBenchmark {
-    @Benchmark
-    public void aggregateRootWithoutCache(Blackhole bh) {
-        bh.consume(new AggregateRootWithoutCache(List.of(new Event.Cleared(), new Event.Deleted())));
+
+    @State(Scope.Benchmark)
+    public static class ReflectionHandlerState {
+        List<Event> events = List.of(new Event.Cleared(), new Event.Deleted());
     }
 
     @Benchmark
-    public void aggregateRootWithCache(Blackhole bh) {
-        bh.consume(new AggregateRootWithCache(List.of(new Event.Cleared(), new Event.Deleted())));
+    public void aggregateRootWithoutCache(Blackhole bh, ReflectionHandlerState state) {
+        bh.consume(new AggregateRootWithoutCache(state.events));
     }
 
+    @Benchmark
+    public void aggregateRootWithCache(Blackhole bh, ReflectionHandlerState state) {
+        bh.consume(new AggregateRootWithCache(state.events));
+    }
 }
