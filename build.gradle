@@ -17,7 +17,7 @@ jmh {
     // https://github.com/melix/jmh-gradle-plugin#configuration-options
     warmupIterations = 2 // Number of warmup iterations to do.
     fork = 1 // How many times to forks a single benchmark. Use 0 to disable forking altogether
-    iterations = 1 // Number of measurement iterations to do.
+    iterations = 4 // Number of measurement iterations to do.
     // https://github.com/jvm-profiling-tools/async-profiler#download
     profilers = ['async:libPath=/Users/lenne.hendrickx/Development/async-profiler-2.8.3-macos/build/libasyncProfiler.dylib;output=flamegraph,text;event=alloc']
 }

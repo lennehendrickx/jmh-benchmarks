@@ -3,18 +3,30 @@ package be.lennehendrickx.jmh;
 import be.lennehendrickx.reflection_handler.AggregateRootWithCache;
 import be.lennehendrickx.reflection_handler.AggregateRootWithoutCache;
 import be.lennehendrickx.reflection_handler.Event;
-import org.openjdk.jmh.annotations.Benchmark;
-import org.openjdk.jmh.annotations.Scope;
-import org.openjdk.jmh.annotations.State;
+import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class ReflectionHandlerBenchmark {
 
     @State(Scope.Benchmark)
     public static class ReflectionHandlerState {
-        List<Event> events = List.of(new Event.Cleared(), new Event.Deleted());
+
+        @Param({ "1", "10", "100", "1000" })
+        public int numberOfEvents;
+        List<Event> events;
+
+        @Setup
+        public void setup() {
+             events = IntStream
+                    .range(0, numberOfEvents)
+                    .mapToObj(iteration -> (Event) new Event.Deleted())
+                    .toList();
+
+        }
+
     }
 
     @Benchmark
